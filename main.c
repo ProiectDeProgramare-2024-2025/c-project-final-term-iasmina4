@@ -111,6 +111,9 @@ void installGame() {
                 printf("Not enough memory to install the game \n");
 
             }
+            if (strcmp(InstalledGames[i].name, gameName) == 0) {
+            printf("Game '%s' is already installed.\n", gameName);
+            }
             else {
                 InstalledGames[installedCount++] = AvailableGames[i];
                 memoryUsed += AvailableGames[i].size;
